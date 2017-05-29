@@ -1,0 +1,45 @@
+.top-buffer1 { margin-top:10px; }
+.top-buffer2 { margin-top:20px; }
+.top-buffer3 { margin-top:30px; }
+.top-buffer4 { margin-top:40px; }
+.top-buffer5 { margin-top:50px; }
+.top-buffer6 { margin-top:60px; }
+.top-buffer7 { margin-top:70px; }
+.top-buffer8 { margin-top:80px; }
+.top-buffer9 { margin-top:90px; }
+
+
+body{
+	font-family: 'Cochin'; 
+	font-weight:  bold;
+}
+
+.heads{
+	font-family: 'Anydore'; 
+	font-size:45px; 
+	padding-left: 10%;
+	color: #ff006c;
+}
+
+
+.heads2{
+	font-size:28px; 
+	
+}
+
+.heads3{
+	font-size:22px; 
+	
+}
+
+.beta{
+	font-family: 'Anydore'; 
+	font-weight: normal;  
+	position: absolute;  
+	right: 12%; top: 15%;
+	font-size:30px;
+	color:white;
+	-ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+}
