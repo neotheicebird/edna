@@ -7,39 +7,114 @@
 .top-buffer7 { margin-top:70px; }
 .top-buffer8 { margin-top:80px; }
 .top-buffer9 { margin-top:90px; }
-
-
+@font-face {
+    font-family: Cochin;
+    src: url(../Cochin.otf);
+}
+@font-face {
+    font-family: Anydore;
+    src: url(../Anydore.otf);
+}
 body{
-	font-family: 'Cochin'; 
+	font-family: 'Cochin';
 	font-weight:  bold;
 }
-
 .heads{
-	font-family: 'Anydore'; 
-	font-size:45px; 
+	font-family: 'Anydore';
+	font-size:45px;
 	padding-left: 10%;
 	color: #ff006c;
 }
-
-
 .heads2{
-	font-size:28px; 
-	
+	font-size:28px;
 }
-
 .heads3{
-	font-size:22px; 
-	
-}
+	font-size:22px;
 
+}
 .beta{
-	font-family: 'Anydore'; 
-	font-weight: normal;  
-	position: absolute;  
+	font-family: 'Anydore';
+	font-weight: normal;
+	position: absolute;
 	right: 12%; top: 15%;
 	font-size:30px;
 	color:white;
 	-ms-transform: rotate(45deg); /* IE 9 */
     -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
     transform: rotate(45deg);
+}
+.pink-btn{
+	background-color: transparent;
+	border: solid 2px #FF006C;
+	border-radius: 5px;
+	padding: 12px 14px 16px 0;
+	color: #393A3F;
+	font-family: tahoma;
+}
+.pink-btn:hover{
+	background-color: #FF006C;
+	border: solid 2px #FF006C;
+	border-radius: 5px;
+	padding: 12px 14px 16px 0;
+	color: #fff;
+	text-decoration: none;
+}
+.pink-btn-out{
+	background-color: #FF006C;
+	border-radius: 5px;
+	padding: 12px 14px 16px 0;
+	color: #fff;
+	font-family: tahoma;
+  margin-bottom: 10px;
+}
+.pink-btn-group{
+	background-color: transparent;
+	border: solid 2px #FF006C;
+	padding: 12px 14px 16px 0;
+	color: #FF006C;
+	font-family: tahoma;
+  margin-bottom: 10px;
+}
+.pink-btn-out:hover{
+	background-color: transparent;
+	border-radius: 5px;
+	padding: 12px 14px 16px 0;
+	color: #FF006C;
+	font-family: tahoma;
+}
+.pink-btn-group:hover{
+	background-color: #FF006C;
+	border: solid 2px #FF006C;
+	padding: 12px 14px 16px 0;
+	color: #fff;
+	font-family: tahoma;
+}
+.btn-submit{
+	background-color: transparent;
+  border: solid 2px #FF006C;
+	border-radius: 5px;
+	padding: 12px 14px 16px 0;
+	color: #393A3F;
+	font-family: tahoma;
+  font-weight: 900;
+}
+.btn-submit:hover{
+	background-color: #FF006C;
+	border-radius: 5px;
+	padding: 12px 14px 16px 0;
+	color:  #fff;
+	font-family: tahoma;
+  cursor: pointer;
+}
+.form{
+  background-color: #F3F3F3;
+  padding: 20px;
+  border-radius: 5px;
+}
+.privacy{
+  color: #292b2c;
+}
+.privacy:hover{
+  text-decoration: none;
+  color: #FF006C;
 }
