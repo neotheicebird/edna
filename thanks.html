@@ -25,31 +25,31 @@
     </div>
   </div>
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
-    <script>
-    $(document).ready(function(){
-      var getUrlParameter = function getUrlParameter(sParam) {
-      var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-          sURLVariables = sPageURL.split('&'),
-          sParameterName,
-          i;
-
-      for (i = 0; i < sURLVariables.length; i++) {
-          sParameterName = sURLVariables[i].split('=');
-
-          if (sParameterName[0] === sParam) {
-              return sParameterName[1] === undefined ? true : sParameterName[1];
-          }
-        }
-      };
-      var slack_url = getUrlParameter('slack_url');
-      var team_id = getUrlParameter('team_id');
-      var app_url = "slack://user?team=" + team_id;
-      $("#slack_web").attr("href", slack_url);
-      $("#slack_app").attr("href", app_url);
-    };
-    </script>
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js" ></script>
+    <script>
+      $(document).ready(function(){
+        var getUrlParameter = function getUrlParameter(sParam) {
+        var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+            sURLVariables = sPageURL.split('&'),
+            sParameterName,
+            i;
+
+        for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
+
+            if (sParameterName[0] === sParam) {
+                return sParameterName[1] === undefined ? true : sParameterName[1];
+            }
+          }
+        };
+        var slack_url = getUrlParameter('slack_url');
+        var team_id = getUrlParameter('team_id');
+        var app_url = "slack://user?team=" + team_id;
+        $("#slack_web").attr("href", slack_url);
+        $("#slack_app").attr("href", app_url);
+      };
+      </script>
   </body>
 </html>
