@@ -8,6 +8,27 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" >
     <link rel="stylesheet" type="text/css" href="css/custom.css">
     <title>Edna Bot | Thank You!</title>
+    <script>
+      var getUrlParameter = function getUrlParameter(sParam) {
+      var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+          sURLVariables = sPageURL.split('&'),
+          sParameterName,
+          i;
+
+      for (i = 0; i < sURLVariables.length; i++) {
+          sParameterName = sURLVariables[i].split('=');
+
+          if (sParameterName[0] === sParam) {
+              return sParameterName[1] === undefined ? true : sParameterName[1];
+          }
+        }
+      };
+      var slack_url = getUrlParameter('slack_url');
+      var team_id = getUrlParameter('team_id');
+      var app_url = "slack://user?team=" + team_id;
+      $("#slack_web").attr("href", slack_url);
+      $("#slack_app").attr("href", app_url);
+    </script>
   </head>
   <body>
     <div class="container-fluid">
@@ -18,8 +39,8 @@
     <div class="col-4 text-right float-right"><p class = "beta" >beta</p><img src="images/group-7.png"></div>
       <div class="col-12 text-center"><p class="heads2">Thank you!</p>
         <p class="top-buffer3 heads3">You have successfully installed Edna to your team.</p>
-          <button type="button" class="btn btn-lg pink-btn-group"><img src="images/slack.png" width="60">Back to Slack App</button>
-          <button type="button" class="btn btn-lg pink-btn-out"><img src="images/slack.png" width="60">Back to Slack Web</button>
+          <a id="slack_web" href="" class="btn btn-lg pink-btn-group"><img src="images/slack.png" width="60">Back to Slack App</a>
+          <a id="slack_app" href="" class="btn btn-lg pink-btn-out"><img src="images/slack.png" width="60">Back to Slack Web</a>
          <div class="col-12 text-center top-buffer6" style="font-weight: normal;"> &#x24B8; 2017 Ednabot | All rights reserved | <a href="privacy_policy.html" class="privacy">Privacy Policy</a></div>
       </div>
     </div>
