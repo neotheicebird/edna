@@ -8,7 +8,25 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" >
     <link rel="stylesheet" type="text/css" href="css/custom.css">
     <title>Edna Bot | Thank You!</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+  <div class="col-8">
+  <div class="col-8 top-buffer5 heads" >Edna bot</div>
+  </div>
+    <div class="col-4 text-right float-right"><p class = "beta" >beta</p><img src="images/group-7.png"></div>
+      <div class="col-12 text-center"><p class="heads2">Thank you!</p>
+        <p class="top-buffer3 heads3">You have successfully installed Edna to your team.</p>
+          <a id="slack_app" href="" class="btn btn-lg pink-btn-group"><img src="images/slack.png" width="60">Back to Slack App</a>
+          <a id="slack_web" href="" class="btn btn-lg pink-btn-out"><img src="images/slack.png" width="60">Back to Slack Web</a>
+         <div class="col-12 text-center top-buffer6" style="font-weight: normal;"> &#x24B8; 2017 Ednabot | All rights reserved | <a href="privacy_policy.html" class="privacy">Privacy Policy</a></div>
+      </div>
+    </div>
+  </div>
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script>
+    $(document).ready(function(){
       var getUrlParameter = function getUrlParameter(sParam) {
       var sPageURL = decodeURIComponent(window.location.search.substring(1)),
           sURLVariables = sPageURL.split('&'),
@@ -28,24 +46,8 @@
       var app_url = "slack://user?team=" + team_id;
       $("#slack_web").attr("href", slack_url);
       $("#slack_app").attr("href", app_url);
+    };
     </script>
-  </head>
-  <body>
-    <div class="container-fluid">
-      <div class="row">
-  <div class="col-8">
-  <div class="col-8 top-buffer5 heads" >Edna bot</div>
-  </div>
-    <div class="col-4 text-right float-right"><p class = "beta" >beta</p><img src="images/group-7.png"></div>
-      <div class="col-12 text-center"><p class="heads2">Thank you!</p>
-        <p class="top-buffer3 heads3">You have successfully installed Edna to your team.</p>
-          <a id="slack_web" href="" class="btn btn-lg pink-btn-group"><img src="images/slack.png" width="60">Back to Slack App</a>
-          <a id="slack_app" href="" class="btn btn-lg pink-btn-out"><img src="images/slack.png" width="60">Back to Slack Web</a>
-         <div class="col-12 text-center top-buffer6" style="font-weight: normal;"> &#x24B8; 2017 Ednabot | All rights reserved | <a href="privacy_policy.html" class="privacy">Privacy Policy</a></div>
-      </div>
-    </div>
-  </div>
-    <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js" ></script>
