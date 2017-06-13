@@ -46,6 +46,7 @@
             </div>
             <input type="hidden" name="team_id" id="team_id" value="">
             <input type="hidden" name="session_id" id="session_id" value="">
+            <input type="hidden" name="bot_id" id="bot_id" value="">
           </form>
         </div>
        <div class="col-12 text-center top-buffer6" style="font-weight: normal;"> &#x24B8; 2017 Ednabot | All rights reserved | <a href="privacy_policy.html" class="privacy">Privacy Policy</a></div>
@@ -63,6 +64,8 @@
           $("#team_id").val(team_id);
           var session_id =  url.searchParams.get('session_id');
           $("#session_id").val(session_id);
+          var session_id =  url.searchParams.get('bot_id');
+          $("#bot_id").val(bot_id);
           var options = '';
           for (var i=0; i<channels.length; i++){
             options += '<option value="' + channels[i] + '">' + channels[i] + '</option>';
