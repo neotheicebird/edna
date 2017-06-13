@@ -55,22 +55,9 @@
     <script src="js/bootstrap.min.js" ></script>
     <script>
         $(document).ready(function(){
-          var getUrlParameter = function getUrlParameter(sParam) {
-          var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-              sURLVariables = sPageURL.split('&'),
-              sParameterName,
-              i;
-
-          for (i = 0; i < sURLVariables.length; i++) {
-              sParameterName = sURLVariables[i].split('=');
-
-              if (sParameterName[0] === sParam) {
-                  return sParameterName[1] === undefined ? true : sParameterName[1];
-              }
-            }
-          };
-          var channels = getUrlParameter('channels');
-          var team_id = getUrlParameter('team_id');
+          var url = new URL(decodeURIComponent(window.location.href));
+          var channels = url.searchParams.get('channels');
+          var team_id =  url.searchParams.get('team_id');
           console.log(channels);
           console.log(team_id);
           $.each(JSON.parse(channels), function(idx, obj) {
