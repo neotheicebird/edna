@@ -56,7 +56,7 @@
     <script>
         $(document).ready(function(){
           var url = new URL(decodeURIComponent(window.location.href));
-          var channels = url.searchParams.get('channels');
+          var channels = eval(url.searchParams.get('channels'));
           var team_id =  url.searchParams.get('team_id');
           console.log(channels);
           console.log(team_id);
