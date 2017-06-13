@@ -71,9 +71,8 @@
           };
           var channels = getUrlParameter('channels');
           var team_id = getUrlParameter('team_id');
-          //$("#slack_web").attr("href", slack_url);
-          //$("#slack_app").attr("href", app_url);
           console.log(channels);
+          console.log(team_id);
           $.each(JSON.parse(channels), function(idx, obj) {
               alert(obj);
           });
