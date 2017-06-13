@@ -73,7 +73,7 @@
           var team_id = getUrlParameter('team_id');
           //$("#slack_web").attr("href", slack_url);
           //$("#slack_app").attr("href", app_url);
-          $.each($.parseJSON(channels), function(idx, obj) {
+          $.each(JSON.parse(channels), function(idx, obj) {
               alert(obj);
           });
         });
