@@ -60,7 +60,7 @@
           var team_id =  url.searchParams.get('team_id');
           console.log(channels);
           console.log(team_id);
-          $.each(JSON.parse(channels), function(idx, obj) {
+          $.each(channels, function(idx, obj) {
               alert(obj);
           });
         });
