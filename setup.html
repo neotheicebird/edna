@@ -22,7 +22,7 @@
           <form class="form" action="http://edna-staging.herokuapp.com/setup" method="post">
             <div class="form-group">
               <label for="channel" class="control-label">Pick A Channel</label>
-              <select class="form-control" name="" id="channel">
+              <select class="form-control" name="channel" id="channel">
                 <!--<option value="">Lorem Ipsum</option>-->
                 <!--<option value="">Lorem Ipsum</option>-->
                 <!--<option value="">Lorem Ipsum</option>-->
@@ -30,12 +30,12 @@
             </div>
             <div class="form-group has-success">
               <label class="form-control-label" for="success_message">Success</label>
-              <textarea class="form-control" id="success_message" rows="4">This is a success message, not sure why this should be in a text input though 0_o ?!.
+              <textarea class="form-control" name="success_message" id="success_message" rows="4">This is a success message, not sure why this should be in a text input though 0_o ?!.
               </textarea>
             </div>
             <div class="form-group">
               <label for="posting" class="control-label">Posting Rights</label>
-              <select class="form-control" name="" id="posting">
+              <select class="form-control" name="posting" id="posting">
                 <option value="message">Message members of the channel selected</option>
                 <option value="dnd">Do not message members</option>
                 <option value="later">I will decide later</option>
@@ -63,7 +63,7 @@
             options += '<option value="' + channels[i] + '">' + channels[i] + '</option>';
           }
           options += '<option value="other">I will decide later/Other channel</option>';
-          #("#channel").append(options);
+          $("#channel").append(options);
         });
         </script>
   </body>
