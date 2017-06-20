@@ -20,27 +20,26 @@
         </div>
         <div class="col-xs-12 col-sm-8 offset-sm-2">
           <form class="form" action="http://edna-staging.herokuapp.com/setup" method="post">
-            <div class="form-group">
-              <label for="channel" class="control-label">Pick A Channel</label>
-              <select class="form-control" name="channel" id="channel">
-                <!--<option value="">Lorem Ipsum</option>-->
-                <!--<option value="">Lorem Ipsum</option>-->
-                <!--<option value="">Lorem Ipsum</option>-->
-              </select>
-            </div>
-            <div class="form-group has-success">
-              <label class="form-control-label" for="success_message">Success</label>
-              <textarea class="form-control" name="success_message" id="success_message" rows="4">This is a success message, not sure why this should be in a text input though 0_o ?!.
-              </textarea>
-            </div>
+            <!--<div class="form-group has-success">-->
+              <!--<label class="form-control-label" for="success_message">Success</label>-->
+              <!--<textarea class="form-control" name="success_message" id="success_message" rows="4">This is a success message, not sure why this should be in a text input though 0_o ?!.-->
+              <!--</textarea>-->
+            <!--</div>-->
             <div class="form-group">
               <label for="posting" class="control-label">Posting Rights</label>
               <select class="form-control" name="posting" id="posting">
-                <option value="message">Message members of the channel selected</option>
-                <option value="dnd">Do not message members</option>
-                <option value="later">I will decide later</option>
+                <option value="dm">Send direct messages to the team members</option>
+                <option value="channel">Message on a channel I select</option>
+                <option value="dnd">Do not message members/I will decide later</option>
               </select>
             </div>
+            <div class="form-group">
+              <label for="channel" class="control-label">Pick A Channel</label>
+              <select class="form-control" name="channel" id="channel">
+
+              </select>
+            </div>
+
             <div class="form-group">
               <input type="submit" class="btn btn-submit btn-block" name="" value="Confirm">
             </div>
@@ -56,6 +55,7 @@
     <script src="js/bootstrap.min.js" ></script>
     <script>
         $(document).ready(function(){
+          $("#channel").hide();
           var url = new URL(decodeURIComponent(window.location.href));
           var channels = eval(url.searchParams.get('channels'));
           var session_id =  url.searchParams.get('session_id');
@@ -66,6 +66,11 @@
           }
           options += '<option value="other">I will decide later/Other channel</option>';
           $("#channel").append(options);
+
+          $('#posting').on('change', function() {
+            var value = $(this).val();
+            alert(value);
+          });
         });
         </script>
   </body>
