@@ -33,9 +33,9 @@
                 <option value="dnd">Do not message members/I will decide later</option>
               </select>
             </div>
-            <div class="form-group" id="channel">
+            <div class="form-group" id="channel-group">
               <label for="channel" class="control-label">Pick A Channel</label>
-              <select class="form-control" name="channel">
+              <select class="form-control" name="channel" id="channel">
 
               </select>
             </div>
@@ -55,7 +55,7 @@
     <script src="js/bootstrap.min.js" ></script>
     <script>
         $(document).ready(function(){
-          $("#channel").hide();
+          $("#channel-group").hide();
           var url = new URL(decodeURIComponent(window.location.href));
           var channels = eval(url.searchParams.get('channels'));
           var session_id =  url.searchParams.get('session_id');
@@ -70,9 +70,9 @@
           $('#posting').on('change', function() {
             var value = $(this).val();
             if (value == "channel"){
-              $("#channel").show();
+              $("#channel-group").show();
             } else {
-              $("#channel").hide();
+              $("#channel-group").hide();
             }
           });
         });
